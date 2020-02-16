@@ -1,0 +1,24 @@
+
+<ul class="messages">
+    {{#messages}}
+    <li class="message-list">
+        <div class="message-author">
+            {{author}}
+        </div>
+        <div class="message-date">
+            {{date}}
+        </div>
+        <div class="message-text">
+            {{text}}
+        </div>
+    </li>
+    {{/messages}}
+</ul>
+<form id="message-form" action="/next" method="post">
+    <div class="form-row">
+        <textarea name="text" id="text-input" rows="4" required minlength="1" maxlength="200" placeholder="Message"></textarea>
+    </div>
+    <div class="form-controls">
+        <button type="submit">Send</button>
+    </div>
+</form>
